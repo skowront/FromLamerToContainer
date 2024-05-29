@@ -39,7 +39,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
       - /etc/letsencrypt/live:/etc/nginx/certs
-      - /etc/letsencrypt/archive/sandbox.regios.org.pl:/etc/nginx/archive/sandbox.regios.org.pl
+      - /etc/letsencrypt/archive/:/etc/nginx/archive/
       - wp_data:/var/www/html
     depends_on:
       - db
