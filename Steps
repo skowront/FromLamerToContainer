@@ -8,14 +8,14 @@ sudo certbot certonly --standalone --register-unsafely-without-email -d sandbox.
 wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/docker/docker-compose.yml
 
 #Step3 Create nginx.conf
-#wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox/nginx.conf
+#wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/nginx/sandbox/nginx.conf
 
 #WARNING: use respective directory!
-#Group 1: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox1/nginx.conf
-#Group 2: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox2/nginx.conf
-#Group 3: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox3/nginx.conf
-#Group 4: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox4/nginx.conf
-#Group 5: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox5/nginx.conf
+#Group 1: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/nginx/sandbox1/nginx.conf
+#Group 2: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/nginx/sandbox2/nginx.conf
+#Group 3: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/nginx/sandbox3/nginx.conf
+#Group 4: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/nginx/sandbox4/nginx.conf
+#Group 5: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/nginx/sandbox5/nginx.conf
 
 #Step4
 docker compose up -d
