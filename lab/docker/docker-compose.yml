@@ -35,6 +35,7 @@ services:
       - 443:443
       - 80:80
     image: nginx:latest
+    restart: unless-stopped
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
       - /etc/letsencrypt/live:/etc/nginx/certs
