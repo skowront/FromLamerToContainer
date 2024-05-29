@@ -2,34 +2,34 @@
 
 services:
   db:
-    # We use a mariadb image which supports both amd64 & arm64 architecture
-    image: mariadb:10.6.4-focal
-    # If you really want to use MySQL, uncomment the following line
-    #image: mysql:8.0.27
-    command: '--default-authentication-plugin=mysql_native_password'
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
+    image: mysql:8.0
+    container_name: db
+    restart: unless-stopped
     environment:
-      - MYSQL_ROOT_PASSWORD=somewordpress
       - MYSQL_DATABASE=wordpress
+      - MYSQL_ROOT_PASSWORD=wordpress
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=wordpress
-    expose:
-      - 3306
-      - 33060
-  wordpress:
-    image: wordpress:latest
-    volumes:
-      - wp_data:/var/www/html
     ports:
-      - 80:80
-    restart: always
+      - 3306:3306
+    volumes:
+      - db_data:/var/lib/mysql
+    command: '--default-authentication-plugin=mysql_native_password'
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:6.4.3-fpm-alpine
+    container_name: wordpress
+    restart: unless-stopped
     environment:
-      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=wordpress
       - WORDPRESS_DB_PASSWORD=wordpress
-      - WORDPRESS_DB_NAME=wordpres
+      - WORDPRESS_DB_NAME=wordpress
+    volumes:
+      - wp_data:/var/www/html
+
   nginx:
     ports:
       - 443:443
@@ -37,8 +37,10 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
-      - ./certs:/etc/nginx/certs
-    depends_on: 
+      - /etc/letsencrypt/live:/etc/nginx/certs
+      - /etc/letsencrypt/archive/sandbox.regios.org.pl:/etc/nginx/archive/sandbox.regios.org.pl
+      - wp_data:/var/www/html
+    depends_on:
       - db
       - wordpress
 
