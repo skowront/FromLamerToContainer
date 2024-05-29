@@ -14,7 +14,7 @@ wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea8
 #Group 1: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox/nginx.conf
 #Group 2: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox2/nginx.conf
 #Group 3: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox3/nginx.conf
-#Group 4: wgethttps://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox4/nginx.conf
+#Group 4: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox4/nginx.conf
 #Group 5: wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox5/nginx.conf
 
 #Step4
