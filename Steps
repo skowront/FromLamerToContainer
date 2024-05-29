@@ -1,7 +1,7 @@
-#Step1
+#Step1 Install certbot
 sudo apt install certbot python3-certbot-nginx
 
 #Step2 (remember to change the domain)
 sudo certbot certonly --standalone --register-unsafely-without-email -d sandbox.regios.org.pl
 
-#Step3 
+#Step3 Create docker-compose.yml 
