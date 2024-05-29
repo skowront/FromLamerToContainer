@@ -31,7 +31,16 @@ services:
       - WORDPRESS_DB_PASSWORD=wordpress
       - WORDPRESS_DB_NAME=wordpres
   nginx:
-
+    ports:
+      - 443:443
+      - 80:80
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs
+    depends_on: 
+      - db
+      - wordpress
 
 volumes:
   db_data:
