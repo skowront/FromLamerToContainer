@@ -5,7 +5,7 @@ sudo apt install certbot python3-certbot-nginx
 sudo certbot certonly --standalone --register-unsafely-without-email -d sandbox.regios.org.pl
 
 #Step3 Create docker-compose.yml 
-wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/docker/docker-compose.yml
+wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/main/lab/docker/docker-compose.yml
 
 #Step3 Create nginx.conf
 #wget wget https://raw.githubusercontent.com/skowront/FromLamerToContainer/eafea89423b6af6460603437e5a2920619a86fa6/lab/nginx/sandbox/nginx.conf
